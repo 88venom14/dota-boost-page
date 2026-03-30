@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { label: "Услуги", href: "#services" },
   { label: "Отзывы", href: "#reviews" },
+  { label: "Связь", href: "#contact" },
 ];
 
 export default function Header() {

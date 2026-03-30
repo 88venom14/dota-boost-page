@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+import { Heart, Send, Mail, MessageCircle } from "lucide-react";
 
 const links = {
   services: [
@@ -18,9 +18,16 @@ const links = {
   ],
 };
 
+// Контакты — замените на свои
+const contacts = {
+  telegram: "https://t.me/semka_boost",
+  email: "support@semka-boost.com",
+  discord: "https://discord.gg/semka",
+};
+
 export default function Footer() {
   return (
-    <footer style={{ background: "#0A0A0A" }}>
+    <footer id="contact" style={{ background: "#0A0A0A" }}>
       {/* Divider */}
       <div
         className="h-px"
@@ -50,6 +57,38 @@ export default function Footer() {
               <br />
               Ранг растёт — ты отдыхаешь.
             </p>
+            
+            {/* Социальные контакты */}
+            <div className="mt-6 flex gap-3">
+              <a
+                href={contacts.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-lg transition-all hover:scale-110"
+                style={{ background: "rgba(255, 140, 0, 0.1)", color: "#FF8C00" }}
+                title="Telegram"
+              >
+                <Send className="h-5 w-5" />
+              </a>
+              <a
+                href={`mailto:${contacts.email}`}
+                className="flex h-10 w-10 items-center justify-center rounded-lg transition-all hover:scale-110"
+                style={{ background: "rgba(255, 140, 0, 0.1)", color: "#FF8C00" }}
+                title="Email"
+              >
+                <Mail className="h-5 w-5" />
+              </a>
+              <a
+                href={contacts.discord}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-lg transition-all hover:scale-110"
+                style={{ background: "rgba(255, 140, 0, 0.1)", color: "#FF8C00" }}
+                title="Discord"
+              >
+                <MessageCircle className="h-5 w-5" />
+              </a>
+            </div>
           </div>
 
           {/* Services links */}
