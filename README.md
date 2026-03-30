@@ -50,11 +50,6 @@ npm install
 # Запуск dev-сервера
 npm run dev
 
-# Сборка для production
-npm run build
-
-# Предварительный просмотр production-сборки
-npm run preview
 ```
 
 Сайт будет доступен по адресу `http://localhost:5173`
