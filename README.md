@@ -129,32 +129,6 @@ npm run preview
 
 ---
 
-## 📊 Статистика расширения
-
-- **Всего очищено баннеров** — счётчик в popup
-- **Status: Protected** — индикатор активности
-
----
-
-## 🛠 Разработка
-
-### Отладка расширения
-
-1. Откройте консоль (F12)
-2. Ищите логи:
-   ```
-   [Semka] Banner selected: banner-horiz.png (ratio: 8.11, 728x90)
-   [Semka] Found 3 ad(s) to heal
-   ```
-
-### Очистка кэша
-
-1. `chrome://extensions/` → Reload
-2. Ctrl+Shift+Delete → Очистить кэш
-3. Ctrl+F5 на странице
-
----
-
 ## 📁 Активы
 
 ### Баннеры
@@ -173,10 +147,3 @@ npm run preview
 | `favicon.ico` | Иконка сайта |
 
 ---
-
-## 📞 Контакты
-
-- **Сайт:** https://semka-boost.com
-- **Dota 2 Boost by Semka x ZXKalendarb © 2026**
-
-> *"Ранг — это просто цифра, твои нервы — это всё."*
