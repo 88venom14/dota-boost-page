@@ -120,7 +120,6 @@ export default function Reviews() {
       className="relative overflow-hidden py-28"
       style={{ background: "#0A0A0A" }}
     >
-      {/* Divider */}
       <div
         className="pointer-events-none absolute left-0 right-0 top-0 h-px"
         style={{
@@ -149,9 +148,7 @@ export default function Reviews() {
         </motion.div>
       </div>
 
-      {/* Marquee */}
       <div className="relative">
-        {/* Edge fades */}
         <div
           className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-32"
           style={{
@@ -172,7 +169,6 @@ export default function Reviews() {
         </div>
       </div>
 
-      {/* Форма отзыва */}
       <div className="mx-auto mt-16 max-w-6xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -187,7 +183,6 @@ export default function Reviews() {
   );
 }
 
-// Форма отправки отзыва
 function ReviewForm() {
   const [name, setName] = useState("");
   const [rank, setRank] = useState("");
@@ -238,7 +233,6 @@ function ReviewForm() {
         </motion.div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Имя */}
           <div>
             <label className="mb-2 block text-sm font-medium" style={{ color: "#AEAEB2" }}>
               Ваше имя
@@ -254,7 +248,6 @@ function ReviewForm() {
             />
           </div>
 
-          {/* Ранг */}
           <div>
             <label className="mb-2 block text-sm font-medium" style={{ color: "#AEAEB2" }}>
               Ваш ранг (было → стало)
@@ -270,7 +263,6 @@ function ReviewForm() {
             />
           </div>
 
-          {/* Текст отзыва */}
           <div>
             <label className="mb-2 block text-sm font-medium" style={{ color: "#AEAEB2" }}>
               Ваш отзыв
@@ -286,7 +278,6 @@ function ReviewForm() {
             />
           </div>
 
-          {/* Звёзды */}
           <div>
             <label className="mb-2 block text-sm font-medium" style={{ color: "#AEAEB2" }}>
               Оценка
@@ -309,7 +300,6 @@ function ReviewForm() {
             </div>
           </div>
 
-          {/* Кнопка отправки */}
           <motion.button
             type="submit"
             whileHover={{ scale: 1.02 }}

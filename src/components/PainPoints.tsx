@@ -53,7 +53,6 @@ const cardVariants = {
 export default function PainPoints() {
   return (
     <section className="relative py-28 px-6" style={{ background: "#0A0A0A" }}>
-      {/* Section header */}
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -73,7 +72,6 @@ export default function PainPoints() {
           </h2>
         </motion.div>
 
-        {/* Cards */}
         <motion.div
           variants={containerVariants}
           initial="hidden"

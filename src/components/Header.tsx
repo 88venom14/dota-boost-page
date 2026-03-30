@@ -24,7 +24,6 @@ export default function Header() {
         }}
       >
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <img
               src="/logo.png"
@@ -36,7 +35,6 @@ export default function Header() {
             </span>
           </a>
 
-          {/* Desktop nav */}
           <nav className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
               <a
@@ -56,7 +54,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Mobile toggle */}
           <button
             className="text-white md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -67,7 +64,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div

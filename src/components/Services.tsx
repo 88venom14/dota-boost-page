@@ -67,7 +67,6 @@ export default function Services() {
       className="relative py-28 px-6"
       style={{ background: "#0A0A0A" }}
     >
-      {/* Divider gradient */}
       <div
         className="pointer-events-none absolute left-0 right-0 top-0 h-px"
         style={{

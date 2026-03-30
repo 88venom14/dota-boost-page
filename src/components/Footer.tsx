@@ -18,7 +18,6 @@ const links = {
   ],
 };
 
-// Контакты — замените на свои
 const contacts = {
   telegram: "https://t.me/semka11L",
   email: "semkaV35@gmail.com",
@@ -28,7 +27,6 @@ const contacts = {
 export default function Footer() {
   return (
     <footer id="contact" style={{ background: "#0A0A0A" }}>
-      {/* Divider */}
       <div
         className="h-px"
         style={{
@@ -39,7 +37,6 @@ export default function Footer() {
 
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-4">
-          {/* Brand */}
           <div className="md:col-span-1">
             <a href="#" className="mb-4 flex items-center gap-2">
               <img
@@ -58,7 +55,6 @@ export default function Footer() {
               Ранг растёт — ты отдыхаешь.
             </p>
 
-            {/* Социальные контакты */}
             <div className="mt-6 flex gap-3">
               <a
                 href={contacts.telegram}
@@ -91,7 +87,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services links */}
           <div>
             <h4
               className="mb-4 text-xs font-semibold uppercase tracking-widest"
@@ -120,7 +115,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company links */}
           <div>
             <h4
               className="mb-4 text-xs font-semibold uppercase tracking-widest"
@@ -149,7 +143,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal links */}
           <div>
             <h4
               className="mb-4 text-xs font-semibold uppercase tracking-widest"
@@ -179,7 +172,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
         <div
           className="mt-16 flex flex-col items-center gap-4 pt-8 text-center md:flex-row md:justify-between md:text-left"
           style={{ borderTop: "1px solid rgba(255, 255, 255, 0.06)" }}

@@ -13,7 +13,6 @@ export default function Hero() {
       className="relative flex min-h-screen items-center justify-center overflow-hidden px-6"
       style={{ background: "#0A0A0A" }}
     >
-      {/* Background gradient orbs */}
       <div
         className="pointer-events-none absolute left-1/2 top-1/4 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-20 blur-[120px]"
         style={{ background: "radial-gradient(circle, #FF8C00 0%, transparent 70%)" }}
@@ -23,7 +22,6 @@ export default function Hero() {
         style={{ background: "radial-gradient(circle, #FF8C00 0%, transparent 70%)" }}
       />
 
-      {/* Grid pattern */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
         style={{
@@ -34,7 +32,6 @@ export default function Hero() {
       />
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
-        {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,7 +48,6 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        {/* Main heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -72,7 +68,6 @@ export default function Hero() {
           </span>
         </motion.h1>
 
-        {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -85,7 +80,6 @@ export default function Hero() {
           Пока мы бустим — ты живёшь.
         </motion.p>
 
-        {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -120,23 +114,22 @@ export default function Hero() {
           </motion.a>
         </motion.div>
 
-        {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="flex justify-center gap-12 md:gap-16"
+          className="grid grid-cols-3 gap-4 md:gap-8"
         >
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
               <div
-                className="text-2xl font-bold md:text-3xl"
+                className="text-2xl font-bold md:text-3xl lg:text-4xl"
                 style={{ color: "#FF8C00" }}
               >
                 {stat.value}
               </div>
               <div
-                className="mt-1 text-xs font-medium uppercase tracking-wider"
+                className="mt-2 text-xs font-medium uppercase tracking-wider"
                 style={{ color: "#636366" }}
               >
                 {stat.label}
@@ -146,7 +139,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
         <motion.div
           initial={{ opacity: 0 }}

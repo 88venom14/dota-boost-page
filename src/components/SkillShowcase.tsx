@@ -29,7 +29,6 @@ export default function SkillShowcase() {
       className="relative py-28 px-6"
       style={{ background: "#0A0A0A" }}
     >
-      {/* Divider */}
       <div
         className="pointer-events-none absolute left-0 right-0 top-0 h-px"
         style={{
@@ -63,7 +62,6 @@ export default function SkillShowcase() {
           </p>
         </motion.div>
 
-        {/* Видео сетка */}
         <div className="grid gap-6 md:grid-cols-3">
           {videos.map((video, index) => (
             <motion.div
@@ -81,7 +79,6 @@ export default function SkillShowcase() {
                 window.open(`https://www.youtube.com/watch?v=${video.videoId}`, "_blank");
               }}
             >
-              {/* Превью */}
               <div className="relative aspect-video overflow-hidden">
                 <img
                   src={video.thumbnail}
@@ -98,7 +95,6 @@ export default function SkillShowcase() {
                 </div>
               </div>
 
-              {/* Информация */}
               <div className="p-5">
                 <h3 className="mb-2 text-base font-semibold text-white">
                   {video.title}
@@ -111,7 +107,6 @@ export default function SkillShowcase() {
           ))}
         </div>
 
-        {/* CTA блок */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
