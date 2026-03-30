@@ -20,9 +20,9 @@ const links = {
 
 // Контакты — замените на свои
 const contacts = {
-  telegram: "https://t.me/semka_boost",
-  email: "support@semka-boost.com",
-  discord: "https://discord.gg/semka",
+  telegram: "https://t.me/semka11L",
+  email: "semkaV35@gmail.com",
+  discord: "https://discord.gg/WsvgBsAG",
 };
 
 export default function Footer() {
@@ -57,7 +57,7 @@ export default function Footer() {
               <br />
               Ранг растёт — ты отдыхаешь.
             </p>
-            
+
             {/* Социальные контакты */}
             <div className="mt-6 flex gap-3">
               <a
