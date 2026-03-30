@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import PainPoints from "./components/PainPoints";
 import Services from "./components/Services";
 import Reviews from "./components/Reviews";
+import SkillShowcase from "./components/SkillShowcase";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
         <Hero />
         <PainPoints />
         <Services />
+        <SkillShowcase />
         <Reviews />
       </main>
       <Footer />
