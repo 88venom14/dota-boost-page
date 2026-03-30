@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Dota 2 Boost by Semka x ZXKalendarb | Ad-Healer",
+  "version": "1.0",
+  "description": "Заменяет токсичную рекламу на спокойствие и MMR.",
+  "permissions": ["storage", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/banner-main.png", "assets/banner-vert.png", "assets/banner-horiz.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

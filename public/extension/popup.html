@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semka x ZXKalendarb</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 220px;
+      background: #0A0A0A;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .count {
+      font-size: 32px;
+      font-weight: 700;
+      color: #FF8C00;
+      margin: 10px 0;
+    }
+
+    .label {
+      font-size: 12px;
+      color: #636366;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: #8E8E93;
+      margin: 8px 0 16px;
+      line-height: 1.4;
+    }
+
+    button {
+      background: #FF8C00;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-weight: 600;
+      width: 100%;
+      font-size: 13px;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background: #FF9D2E;
+      transform: scale(1.02);
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 16px;
+      padding: 8px;
+      background: rgba(39, 202, 64, 0.08);
+      border-radius: 8px;
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      background: #27CA40;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .status-text {
+      font-size: 11px;
+      color: #27CA40;
+      font-weight: 600;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 10px;
+      color: #48484A;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="logo" img src="assets/logo.png" alt="Semka x ZXKalendarb"></div>
+
+  <div class="label">Очищено баннеров</div>
+  <div id="counter" class="count">0</div>
+
+  <div class="subtitle">Твой покой под защитой Semka x ZXKalendarb</div>
+
+  <button onclick="window.open('https://semka-boost.com', '_blank')">Заказать буст</button>
+
+  <div class="status">
+    <div class="status-dot"></div>
+    <div class="status-text">Protected</div>
+  </div>
+
+  <div class="footer">v1.0 — Semka x ZXKalendarb © 2026</div>
+
+  <script>
+    // Load counter from storage
+    if (typeof chrome !== 'undefined' && chrome.storage) {
+      chrome.storage.local.get(['totalHealed'], function (result) {
+        const total = result.totalHealed || 0;
+        animateCounter(total);
+      });
+    } else {
+      // Demo mode
+      animateCounter(47);
+    }
+
+    function animateCounter(target) {
+      const el = document.getElementById('counter');
+      if (!el) return;
+      let current = 0;
+      const step = Math.max(1, Math.floor(target / 30));
+      const interval = setInterval(function () {
+        current += step;
+        if (current >= target) {
+          current = target;
+          clearInterval(interval);
+        }
+        el.innerText = current;
+      }, 30);
+    }
+  </script>
+</body>
+
+</html>
